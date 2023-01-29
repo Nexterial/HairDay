@@ -1,0 +1,225 @@
+
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-right: 5%;
+    margin-left: 5%;
+    background-color:rgb(202, 197, 197);
+    transition: 0.9s;
+    
+}
+
+header > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+h1, h2{
+    font-size: 2rem;
+    color:black;
+    margin-left: 40px;
+}
+
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50rem;
+    border-radius: 20px;
+    margin: 0 auto;
+    font-size: 32px;
+    background-color:white;
+   
+    
+
+}
+ul li {
+  margin-right: 40px;
+}
+
+
+ul li a {
+    text-decoration: none;
+    color:rgb(255, 140, 0);
+}
+ul li a:hover{
+    border-radius: 10px;
+    border-bottom: 3px solid brown;
+    border-top: 3px solid brown;
+    color: brown;
+    transition: 0.5s;
+}
+
+ul li a:active {
+    text-decoration: underline;
+    border:none;
+}
+
+.laygrid {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+}
+article{
+    margin-top: 3rem;
+    padding:20px 50px 20px 50px ;
+}
+
+.laygrid > article {
+    margin-right: 3rem;
+    background-color:rgba(121, 118, 115, 0.2);
+    border-radius: 20px;
+}
+article > img {
+    max-width: 100%;
+}
+article > p {
+    color:white;
+    font-size: 2rem;
+}
+article > a {
+    color: black;
+    text-decoration: none;
+    font-size: 2rem;
+}
+article > a:hover {
+    color:rgb(255, 140, 0);
+   
+}
+#cover{
+    background-image:url(../img/art1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    filter: drop-shadow(15px 10px 4px rgb(27, 25, 25));
+    
+}
+
+footer{
+    position: relative;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 10rem;
+}
+
+@keyframes rotation{
+    from{
+        transform: rotate(0);
+        
+    }
+    to{
+        transform: rotate(20deg);
+    }
+}
+#anima{
+    position: absolute;
+    top: -140px;
+    left: 20px;
+    width: 7rem;
+    height: 7rem;
+    animation:rotation 2s linear;
+    animation-direction:alternate;
+    animation-iteration-count: infinite;
+
+}
+footer div > img {
+    margin-top: 5px;
+}
+footer  div > p {
+    border-top: 4px solid rgb(227, 129, 9);
+    text-align: right;
+    font-size: 2rem;
+}
+
+
+@media(max-width:992px){
+    header > img {
+        width: 50%;
+        height: 50%;
+    }
+    nav ul {
+        height: 30px;
+        width: 100%;
+        font-size: 15px;
+       
+
+    }
+    article > p {
+        font-size: 12px;
+    }
+    .laygrid{
+        display: flex;
+        margin:10px;
+    }
+    article{
+        margin: 20px 0 20px 0;
+        padding: 10px;
+    }
+    article > h2 {
+        font-size: 14px;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 10px 0;
+    }
+    article  p {
+        font-size: 12px;
+    }
+    article > a{
+        font-size: 10px;
+
+    }
+
+    footer{
+        margin-top: 20px;
+    }
+    footer div > img {
+        width: 50%;
+        height: 50%;
+    }
+    footer div > p {
+        border-top: 2px solid rgb(227, 129, 9);
+        text-align: right;
+        font-size: 10px;
+    }
+    #anima{
+        position: absolute;
+        top: -30px;
+        left: 20px;
+        width: 30px;
+        height: 30px;
+    
+    }
+}
+
+@media(max-width:600px){
+    .laygrid{
+        display: block;
+        margin: 0 auto;
+        padding: 0;
+    }
+    article {
+        margin-left:50px;
+    }
+    #anima{
+        display: none;
+    }
+    footer{
+        display: block;
+        
+    }
+    footer div > img {
+        display: block;
+        margin: 0 auto;
+    }
+    footer div > p {
+        text-align: center;
+        padding-top: 20px;
+    }
+}
+
